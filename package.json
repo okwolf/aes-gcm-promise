@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "coveralls": "^2.13.1",
     "eslint": "^4.5.0",
     "eslint-plugin-prettier": "^2.2.0",
     "mocha": "^3.5.0",
@@ -21,8 +22,10 @@
     "prettier": "^1.5.3"
   },
   "scripts": {
-    "lint": "eslint src test --fix",
-    "test": "nyc mocha"
+    "lint": "eslint src test",
+    "test": "nyc mocha",
+    "prepublish": "npm run lint && npm run coverage",
+    "coverage": "npm test && cat coverage/lcov.info | coveralls"
   },
   "nyc": {
     "tempDirectory": "coverage",

@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '6'
+deploy:
+  provider: npm
+  email: wolf@okwolf.com
+  api_key:
+    secure: 7wkCgQ71eufA2C34LMxJqV4USaLlAQhVLYuyzs94lJ4na+eSspIHmUZJuh/lZujkZFWS/YcvniPc4Su+zEcvhDydS7hkq7yFHYD9f+ZQD7ALsJ+hOQVJSjCxuP2fOzh8HTqVtfgc3JK0PsSbxR0DvnJ/rhAhlFDsTPqH5pjctaYl+J9vHJHQH8HpbKZqSg6afHidaXRBrhHYdj0ejFcx7aWqY+KsXaiNpUpjzmyoc3aUvkK4YjmcYvVcOnRiQhP9ziGycZJ/We84xYu9O/9O7jh0QC5JDrdbOgyvWk8PVqZ4uo4lz1Cf2Ch6lfuJXK/bysMRg4AthTvoHRM9sSXN8SlkxnxZ81hNcgMIgaFcOnMV+UqrakOAQgrqofvCYbey6yY+vixqNmb2yRSkaf/wOD4wtcign7y5YVVCPAu/9zK/79d4L17YHFn7wmfL0aPGMPBaoqd+CJO+RAXlLkmAh3Vux/TpqGbYq2+xbUqiHP6muZkrWzMZOpzCNRxRi4uj9u1DkzKotoNX7cWoHzdA72Okk7iQm8bGcaQFMJh/WNLF2STlKA68KlTU51/+cQvOJToDbLdTiNu8nDxl3dUgKkTpmawSAya3S0VU+yvIl3od5ETLUgI9daBHJJh/monXQsFjXn/fOg+kJ1zNOg1KT5LXGI+mMoeLh0EXhQggRjk=
+  on:
+    tags: true
+    repo: okwolf/aes-gcm-promise
