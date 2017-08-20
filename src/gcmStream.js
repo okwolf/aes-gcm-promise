@@ -57,8 +57,9 @@ module.exports = {
         // Compute the authentication tag over all the input
         const tag = Buffer.concat([cipher.final(), cipher.getAuthTag()]);
         // And add the tag at the end of the output stream
-        // Indicate no error by passing null as the first argument
-        callback(null, tag);
+        this.push(tag);
+        // Always call the callback when we're done transforming this chunk
+        callback();
       }
     });
   },
@@ -114,8 +115,9 @@ module.exports = {
             decipher.final()
           ]);
           // And add the plaintext at the end of the output stream
-          // Indicate no error by passing null as the first argument
-          callback(null, remainingPlaintext);
+          this.push(remainingPlaintext);
+          // Always call the callback when we're done transforming this chunk
+          callback();
           // If there's an error
         } catch (error) {
           // Send the error to our callback
