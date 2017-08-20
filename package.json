@@ -24,7 +24,7 @@
   "scripts": {
     "lint": "eslint src test",
     "test": "nyc mocha",
-    "coverage": "npm test && cat coverage/lcov.info | coveralls"
+    "coverage": "cat coverage/lcov.info | coveralls"
   },
   "nyc": {
     "tempDirectory": "coverage",
